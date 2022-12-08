@@ -1,8 +1,15 @@
+html{
+    background-color: #48435C;
+}
+
+
+
 nav{
-    margin: 100px auto;
-    width: 50%;
+
+    width: 100%;
     height: 100px;
-    background: #48435C;
+    background-color: black ;
+
 }
 
 nav .main_pages{
@@ -26,9 +33,23 @@ nav a:hover{
     background: #5A5766;
 }
 
-label{
+label, #toggle{
     display:none;
 }
+
+h1{
+    text-align: center;
+    font-family: "Arial Black","sans-serif";
+    color:whitesmoke;
+    margin-bottom: 0px;
+
+}
+header > img{
+    text-align: center;
+    width: 10%;
+    height: 10%;
+}
+
 
 @media all and (max-width: 991px) {
     nav{
@@ -36,6 +57,9 @@ label{
     }
     nav .main_pages{
         display:none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
     }
 
     label{
@@ -47,5 +71,9 @@ label{
         font-size: 40px;
         color:white;
         cursor: pointer;
+    }
+
+    #toggle:checked + .main_pages{
+        display:flex;
     }
 }
